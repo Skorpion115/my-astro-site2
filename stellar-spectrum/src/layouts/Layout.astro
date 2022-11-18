@@ -1,35 +1,72 @@
 ---
-export interface Props {
-	title: string;
-}
+import "../assets/css/global.css";
+import AppleTouchIcons from "../components/AppleTouchIcons.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://musikstudio-ziebart.de/" />
+    <!-- <link rel="icon" href="icons/favicon.ico" /> -->
+    <!--<link rel="manifest" href="manifest.json" /> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66Z7DSTCPC"
+    ></script>
+    <!--
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-66Z7DSTCPC");
+        gtag("config", "AW-93825274");
+    </script> -->
+
+    <!-- de = deutschsprachig -->
+    <meta name="Language" content="de" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta
+      name="author"
+      content="Rudi Ziebart, postmaster@musistudio-ziebart.de"
+    />
+    <meta
+      name="DC.Publisher"
+      content="Rudi Ziebart, postmaster@musikstudio-ziebart.de"
+    />
+    <meta name="DC.date" content="Collection" />
+    <meta name="DC.rights" content="Alle Rechte liegen beim Author" />
+    <meta name="robots" content="selektion" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="robots" content="max-snippet:-1" />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+    <AppleTouchIcons />
+  </head>
+
+  <body class="">
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (localStorage.getItem("theme") == "invert") {
+          document.querySelector("body").classList.add("invert");
+        }
+      });
+    </script>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

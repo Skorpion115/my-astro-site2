@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Leistungen"
+  description="Leistungen, querflötenkurs, querflöte lernen, querflötenunterricht nürnberg, querflötenunterricht in der nähe, querflöte spielen lernen, querflötenunterricht in eibach, querflöte lernen anfänger"
+  keywords="Leistungen, Querflöte, Querflöteunterricht"
+>
+  <h1>Leistungen</h1>
+  <section id="leistungen">
+    <h2>Wählen Sie ihr Wunschinstrument aus!</h2>
+    <article>
+      <div class="dropdown">
+        <button class="dropbtn">Instrument</button>
+        <div class="dropdown-content">
+          <a href="/klavierunterricht/">Klavierunterricht</a>
+          <a href="/keyboardunterricht/">Keyboardunterricht</a>
+          <a href="/gitarrenunterricht/">Gitarrenunterricht</a>
+          <a href="/e-bassunterricht/">E-Bassunterricht</a>
+          <a href="/e-gitarrenunterricht/">E-Gitarrenunterricht</a>
+          <a href="/banjounterricht/">Banjounterricht</a>
+          <a href="/akkordeon-unterricht/">Akkordeon Unterricht</a>
+          <a href="/saxophonunterricht/">Saxophon Unterricht</a>
+          <a href="/klarinettenunterricht/">Klarinettenunterricht</a>
+        </div>
+      </div>
+      <p>
+        Mehr Information über die einzelnen Instrumente bekommen Sie oben aus
+        der Dropdown Liste!
+      </p>
+      <p>
+        Bei weiteren Fragen klicken Sie oben den Button "Instrumentenkauf" an!
+      </p>
+      <h2>Tutorials für Noten und Harmonielehre!</h2>
+      <div class="dropdown">
+        <button class="dropbtn">Harmonielehre</button>
+        <div class="dropdown-content">
+          <a href="/noten_lesen/" target="_top">Noten lesen lernen Teil I</a>
+          <a href="/intervalle/" target="_top">Intervalle Teil II</a>
+          <a href="/triads/" target="_top">Dreiklänge Teil III</a>
+          <a href="/functional_theory/" target="_top">Funktionstheorie Teil IV</a
+          >
+        </div>
+      </div>
+
+      <h2>Querflötenunterricht</h2>
+      <picture>
+        <source
+          srcset="/images/querfloete-wide.webp"
+          media="(min-width: 600px)"
+        />
+        <img
+          src="/images/querfloete-narrow.webp"
+          width="320"
+          height="420"
+          alt="Schule_für_Querflote"
+        />
+      </picture>
+      <p>
+        Die Querflöte ist das Instrument der Götter sagt man. Ich nehme die
+        Querflötenschule von Elisabeth Weinzierl und Edmund Wächter. Der Titel
+        ist "Lern Querflöte spielen". Eine CD ist ebenfalls dabei und es gibt 2
+        Bänder von diesem Werk.
+      </p>
+      <ul>
+        <li><a href="/faq/" class="link-grey">[FAQ]</a></li>
+        <li><a href="/download/" class="link-grey">[Download]</a></li>
+        <li><a href="/impressum/" class="link-grey">[Impressum]</a></li>
+      </ul>
+    </article>
+  </section>
+</Layout>
