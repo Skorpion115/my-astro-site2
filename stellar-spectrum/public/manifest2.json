@@ -1,0 +1,17 @@
+{
+    "name": "Programmieren mit Mario",
+    "short_name": "Mit Mario",
+    "description": "Webentwicklung einfach starten - Alles rundum Webentwicklung Webdesign und angrenzende Themen",
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#191919",
+    "background_color": "#191919",
+    "icons": [
+      {
+        "src": "icons/manifest-icon-16.favicon.ico",
+        "sizes": "16x16",
+        "type": "image/ico",
+        "purpose": "any"
+      }
+    ]
+  }
