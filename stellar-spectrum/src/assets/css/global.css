@@ -1,0 +1,825 @@
+/* ANCHOR Fonts */
+@font-face {
+  font-family: "IBM";
+  src: url(../fonts/OpenSans-Regular.woff2) format("woff2"), url(../fonts/OpenSans-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM";
+  src: url(../fonts/OpenSans-Italic.woff2) format("woff2"), url(../fonts/OpenSans-Italic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM";
+  src: url(../fonts/OpenSans-Bold.woff2) format("woff2"), url(../fonts/OpenSans-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+/* ANCHOR Custom Properties */
+body {
+  --color-black: #191919;
+  --color-white: #e1e1e1;
+  --color-grey: #a3a3a3;
+  --color-green: #13f270;
+  --color-red: #fc1a52;
+  --color-purple: #ee0dfe;
+  --color-yellow: #c1de04;
+  --color-blue: #03bfee;
+  --color-blau: #336699;
+  --font: "IBM", sans-serif;
+  --line: 3ch;
+  --font-scale: 0.4vw;
+}
+
+body.invert {
+  --color-black: #ffe8d4;
+  --color-white: #191919;
+  --color-grey: #6e6e6e;
+  --color-green: #1f864a;
+  --color-red: #c61340;
+  --color-purple: #800257;
+  --color-yellow: #e37e02;
+  --color-blue: #0856af;
+  --color-blau: #41dce1;
+}
+
+/* ANCHOR General Style */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-style: normal;
+  font-size: calc(1rem + var(--font-scale));
+  line-height: var(--line);
+  font-weight: 400;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+header,
+footer {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+p {
+  font-weight: normal;
+  padding: 1.25rem;
+  text-align: start;
+}
+
+/* ANCHOR root Element html-Element */
+html {
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3 h1 {
+  font-size: 2rem;
+  padding-left: 1.2rem;
+  color: rgb(218, 54, 54);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1.2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Rudi.jpg*/
+/* alle Bilder werden mit 20% von links positioniert */
+img {
+  width: 90%;
+  height: auto;
+  max-width: 100%;
+  margin-left: 20%;
+  box-shadow: 2px 2px 5px #666;
+}
+
+/* ANCHOR Navigation */
+nav > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Link Colors */
+.link-white,
+.link-blue,
+.link-green,
+.link-grey,
+.link-purple,
+.link-blau,
+.link-red {
+  cursor: pointer;
+}
+
+.link-white {
+  color: var(--color-white);
+}
+
+.link-white:hover {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.link-red {
+  color: var(--color-red);
+}
+
+.link-red:hover {
+  color: var(--color-black);
+  background-color: var(--color-red);
+}
+
+.link-purple {
+  color: var(--color-purple);
+}
+
+.link-purple:hover {
+  color: var(--color-black);
+  background-color: var(--color-purple);
+}
+
+.link-grey {
+  color: var(--color-grey);
+}
+
+.link-grey:hover {
+  color: var(--color-black);
+  background-color: var(--color-grey);
+}
+
+.link-green {
+  color: var(--color-green);
+}
+
+.link-green:hover {
+  color: var(--color-black);
+  background-color: var(--color-green);
+}
+
+.link-blue {
+  color: var(--color-blue);
+}
+
+.link-blue:hover {
+  color: var(--color-black);
+  background-color: var(--color-blue);
+}
+
+.link-blau {
+  color: var(--color-blau);
+}
+
+.link-blau:hover {
+  color: var(--color-black);
+  background-color: var(--color-blau);
+}
+
+/* ANCHOR Text Colors */
+.text-black {
+  color: var(--color-black);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-grey {
+  color: var(--color-grey);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+
+.text-red {
+  --color-red: #fc1a52;
+}
+
+.text-purple {
+  --color-purple: #cb06d9;
+}
+
+.text-yellow {
+  --color-yellow: #c1de04;
+}
+
+.text-blue {
+  --color-blue: #03bfee;
+}
+
+.text-blau {
+  --color-blau: #336699;
+}
+
+/* ANCHOR Hauptseite */
+.conteneur {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 0px solid black;
+  align-content: space-between;
+  width: 94vw;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Container Inhalt */
+.marchandise {
+  padding: 10px 20px;
+}
+
+/* Kind Elemente */
+.marchandise-1 {
+  flex: 2;
+}
+
+.marchandise-2 {
+  flex: 1;
+}
+
+.conteneur ul li {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  height: 3rem;
+  box-shadow: 2px 2px 5px #666;
+  margin-top: 15px;
+  padding: 0.3rem 1.875rem;
+  font-size: large;
+  list-style-type: none;
+}
+
+.conteneur img {
+  width: 90%;
+  height: auto;
+  max-width: 100%;
+  margin-left: 0%;
+  box-shadow: 2px 2px 5px #666;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ANCHOR Instrumentenkauf */
+.container2 {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  /* 100 view width */
+  width: 100vw;
+  /* view height kompletten viewport der verfügbar ist */
+  font-style: normal;
+  /* feste Höhe */
+  /* nebeneinander */
+  display: flex;
+  /* links starten */
+  justify-content: flex-start;
+  /* verticale Ausrichtung */
+  align-items: flex-start;
+  /* Zeilenumbruch möglich */
+  flex-wrap: wrap;
+  /* Für mehrere Element */
+  align-content: flex-start;
+}
+
+/* Tabelle für Sprungmarken */
+.container2 table {
+  font-weight: bold;
+  text-align: center;
+  line-height: 3rem;
+  table-layout: auto;
+  width: 30%;
+  margin-left: 1.2rem;
+}
+
+/* Container Inhalt */
+.artikel {
+  padding: 10px 20px;
+}
+
+/* Kindelelemente */
+.artikel-1 {
+  flex: 34%;
+}
+
+.artikel-2 {
+  flex: 33%;
+}
+
+.artikel-3 {
+  flex: 33%;
+}
+
+/* pictures from instrumentenkauf.html */
+.artikel picture img {
+  width: 50%;
+  height: auto;
+  box-shadow: 0px 0px 10px 5px #4c4948;
+  border-radius: 5px;
+}
+
+.artikel img {
+  width: 50%;
+  height: auto;
+  box-shadow: 0px 0px 10px 5px #4c4948;
+  border-radius: 5px;
+}
+
+.container2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Honorar */
+.container {
+  font-style: normal;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 1px solid #333;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 0.5rem 1.5rem;
+}
+
+.item-1 {
+  flex: 25%;
+}
+
+.item-2 {
+  flex: 25%;
+}
+
+.item-3 {
+  flex: 50%;
+}
+
+#honorar {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  font-style: normal;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+#honorar picture img {
+  max-width: 25%;
+  height: auto;
+  box-shadow: 0px 0px 10px 5px #4c4948;
+  border-radius: 5px;
+  margin-left: 15%;
+}
+
+#honorar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Leistungen */
+#leistungen {
+  display: block;
+  width: 96%;
+  max-width: 100%;
+  padding: 1.5em;
+  margin: 0;
+  font-style: normal;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+#leistungen article {
+  display: inline-block;
+  margin: 2rem auto;
+  text-align: left;
+  width: 100%;
+  vertical-align: top;
+  padding: 1.25rem;
+}
+
+#leistungen ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Dropdown für Instrumente und Hamonielehre */
+.dropbtn {
+  background-color: #000;
+  padding: 0.9rem;
+  margin: 2rem auto;
+  font-size: 1.125rem;
+  border: none;
+  color: #fff;
+  border-radius: 5%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 1.125rem;
+  padding-inline-start: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d3d3d3;
+  z-index: 1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 1.125rem 1.125rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #00A4BD;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: gray;
+}
+
+#leistungen picture img {
+  max-width: 20%;
+  height: auto;
+  box-shadow: 0px 0px 10px 5px #4c4948;
+  border-radius: 5px;
+  float: right;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+/* ANCHOR Instruments_lesson */
+
+#instruments_lesson {
+  font-size: calc(1rem + var(--font-scale));
+  line-height: var(--line);
+  color: var(--color-white);
+  background-color: var(--color-black);
+  width: 96%;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+#instruments_lesson article {
+  display: inline-block;
+  margin: 2rem auto;
+  width: 100%;
+  vertical-align: top;
+}
+
+#instruments_lesson article picture img {
+  max-width: 20%;
+  height: auto;
+  box-shadow: 0px 0px 10px 5px #4c4948;
+  border-radius: 5px;
+  float: right;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container-wrapper {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#instruments_lesson ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Harmonielehre Noten lesen usw. Video */
+#harmonielehre {
+  font-size: calc(1rem + var(--font-scale));
+  line-height: var(--line);
+  color: var(--color-white);
+  background-color: var(--color-black);
+  width: 96%;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+#harmonielehre article {
+  display: inline-block;
+  margin: 2rem auto;
+  width: 100%;
+  vertical-align: top;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container-wrapper {
+  max-width: 100%;
+  width: 560px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#harmonielehre ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR FAQ */
+#faq {
+  display: block;
+  width: 96%;
+  max-width: 100%;
+  padding: 0em;
+  font-family: var(--font);
+  font-style: normal;
+  margin: 2rem auto;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+#faq article {
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 1.25rem;
+  text-align: left;
+  width: 100%;
+  vertical-align: top;
+}
+
+.row {
+  position: relative;
+  margin: 0px 0 0 50px;
+  float: right;
+  width: 350px;
+}
+
+.row img {
+  float: left;
+}
+
+.row p {
+  margin-left: 100px;
+}
+
+#faq div {
+  margin-left: 3%;
+}
+
+#faq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Download */
+#download {
+  display: block;
+  width: 96%;
+  max-width: 100%;
+  margin: 7% auto;
+  padding: 1.25em;
+  text-align: center;
+  font-style: normal;
+  font-family: var(--font);
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+#download article {
+  display: inline-block;
+  width: 96%;
+  vertical-align: top;
+}
+
+/* Midi Wiedergabe */
+#download table {
+  width: auto;
+  text-align: center;
+  box-shadow: 1px 2px 5px #666666;
+}
+
+#download article table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+#download article table th {
+  font-size: 1rem;
+  font-weight: bold;
+  empty-cells: show;
+}
+
+#download article table td {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Download Videos */
+figcaption strong {
+  border-bottom: 10px solid #d6d0c1;
+  padding-bottom: 0px;
+  margin: 0px 0;
+  display: block;
+}
+
+figcaption {
+  margin: 1rem;
+  padding: 0rem;
+  width: auto;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+#download article figure {
+  margin: 0 auto;
+}
+
+#download article p {
+  margin: 0em;
+  text-align: left;
+}
+
+#download article h3 {
+  margin-left: 3%;
+  font-size: 1.25rem;
+}
+
+#download ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ANCHOR Impressum */
+#impressum {
+  display: block;
+  width: 96%;
+  max-width: 100%;
+  padding: 0;
+  margin: 2rem auto;
+  font-family: var(--font);
+  font-style: normal;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+#impressum {
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 1.25rem;
+  text-align: left;
+  width: 100%;
+  vertical-align: top;
+}
+
+#impressum ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Footer */
+/* ANCHOR footer styles */
+/* footer > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+} */
+/* Mobile Style Mediaqueries */
+/* ANCHOR 800px */
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%;
+    display: block;
+  }
+  video.responsive-video {
+    max-width: 300px;
+    height: auto;
+  }
+}
+/*
+$brandcolor: royalblue;
+
+h1 {
+color: $brandcolor;
+font-size: 3rem;
+font-weight: 500;
+}
+
+@import "assets/header"; */
+
+/*# sourceMappingURL=global.css.map */
