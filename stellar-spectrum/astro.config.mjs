@@ -9,10 +9,10 @@ export default defineConfig({
     build: {
     // Beispiel: Erzeuge `page.html` statt `page/index.html`
     // während des Build-Prozesses.
-        format: 'file'
+        format: 'directory'
     },
     server: { port: 3000, host: true },
-    server: { port: 8080 },
+    server: { port: 3000 },
     markdown: {
         // Beispiel: Alle Entwürfe in den endgültigen Build einbeziehen
         drafts: true,
