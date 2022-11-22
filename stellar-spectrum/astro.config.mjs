@@ -1,4 +1,31 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    site: 'https://www.musikstudio-ziebart.dev',
+    // Beispiel: Erfordere abschließende Schrägstriche
+    // in Seiten-URLs während der Entwicklung
+    trailingSlash: 'always',
+    build: {
+    // Beispiel: Erzeuge `page.html` statt `page/index.html`
+    // während des Build-Prozesses.
+        format: 'file'
+    },
+    server: { port: 3000, host: true },
+    server: { port: 8080 },
+    markdown: {
+        // Beispiel: Alle Entwürfe in den endgültigen Build einbeziehen
+        drafts: true,
+    },
+    markdown: {
+        // Beispiel: Verarbeite Markdown-Dateien ohne MDX
+        mode: 'md',
+    },
+    vite: {
+        ssr: {
+          // Beispiel: Erzwinge das Überspringen eines defekten Pakets
+          // bei der SSR-Verarbeitung, falls erforderlich
+          external: ['defektes-npm-paket'],
+        }
+    },
+});
