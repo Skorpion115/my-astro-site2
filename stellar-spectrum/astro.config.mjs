@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://www.musikstudio-ziebart.dev',
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
     trailingSlash: 'always',
@@ -21,6 +20,8 @@ export default defineConfig({
         // Beispiel: Verarbeite Markdown-Dateien ohne MDX
         mode: 'md',
     },
+    // Beispiel: Füge React- & Tailwind-Unterstützung zu Astro hinzu
+    integrations: [react(), tailwind()],
     vite: {
         ssr: {
           // Beispiel: Erzwinge das Überspringen eines defekten Pakets
