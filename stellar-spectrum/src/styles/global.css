@@ -367,54 +367,7 @@ nav > ul {
 }
 
 /* ANCHOR FAQ */
-#faq {
-  display: block;
-  width: 96%;
-  max-width: 100%;
-  padding: 0em;
-  font-family: var(--font);
-  font-style: normal;
-  margin: 2rem auto;
-  color: var(--color-white);
-  background-color: var(--color-black);
-}
 
-#faq article {
-  display: inline-block;
-  margin: 2rem auto;
-  padding: 1.25rem;
-  text-align: left;
-  width: 100%;
-  vertical-align: top;
-}
-
-.row {
-  position: relative;
-  margin: 0px 0 0 50px;
-  float: right;
-  width: 350px;
-}
-
-.row img {
-  float: left;
-}
-
-.row p {
-  margin-left: 100px;
-}
-
-#faq div {
-  margin-left: 3%;
-}
-
-#faq ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
 
 /* ANCHOR Download */
 #download {
