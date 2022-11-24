@@ -241,77 +241,7 @@ nav > ul {
 
 
 /* ANCHOR Instrumentenkauf */
-.container2 {
-  color: var(--color-white);
-  background-color: var(--color-black);
-  /* 100 view width */
-  width: 100vw;
-  /* view height kompletten viewport der verfügbar ist */
-  font-style: normal;
-  /* feste Höhe */
-  /* nebeneinander */
-  display: flex;
-  /* links starten */
-  justify-content: flex-start;
-  /* verticale Ausrichtung */
-  align-items: flex-start;
-  /* Zeilenumbruch möglich */
-  flex-wrap: wrap;
-  /* Für mehrere Element */
-  align-content: flex-start;
-}
 
-/* Tabelle für Sprungmarken */
-.container2 table {
-  font-weight: bold;
-  text-align: center;
-  line-height: 3rem;
-  table-layout: auto;
-  width: 30%;
-  margin-left: 1.2rem;
-}
-
-/* Container Inhalt */
-.artikel {
-  padding: 10px 20px;
-}
-
-/* Kindelelemente */
-.artikel-1 {
-  flex: 34%;
-}
-
-.artikel-2 {
-  flex: 33%;
-}
-
-.artikel-3 {
-  flex: 33%;
-}
-
-/* pictures from instrumentenkauf.html */
-.artikel picture img {
-  width: 50%;
-  height: auto;
-  box-shadow: 0px 0px 10px 5px #4c4948;
-  border-radius: 5px;
-}
-
-.artikel img {
-  width: 50%;
-  height: auto;
-  box-shadow: 0px 0px 10px 5px #4c4948;
-  border-radius: 5px;
-}
-
-.container2 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
 
 /* ANCHOR Honorar */
 .container {
