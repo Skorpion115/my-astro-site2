@@ -1,7 +1,11 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+    // Sitemap intergrieren
+    site: 'https://musikstudio-ziebart.de',
+    integrations: [sitemap({})],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
     trailingSlash: 'always',
