@@ -1,4 +1,4 @@
-# Recaptcha Version 3
+# Neues Astro Projekt + Recaptcha Version 3
  Ein neues Astro Projekt. Es ist aufgebaut von einem Videotutorial von Mario Laurich über das Framework Astro. Das Projekt beinhaltet auch ein komplettes Anmeldeformular mit recaptcha Version 3. Diese Internetseite ist frei verfügbar. Ich erhebe keinerlei Lizensen. Der Ordner ist mit "recaptchav3" benannt. Das Anmeldeformular Recaptcha einhält eine "contact.html" Seite, eine "thanks.html" Seite und eine "send.php" Seite. Außerdem besitzt sie eine eigene css Datei und auch eigene Fonts.
 
  Es sind in dem Astro Projekt nur die Astro Dateien enthalten, den "/dist" Ordner für die Veröffentlichung habe ich nicht hochgeladen! Man kann auch ohne dem "/dist" Ordner die Datein starten und wer möchte kann sich ja dann den "/dist" Ordner mit dem Befehl: "npm run build" ausgeben lassen. Ansonsten wird das Astro Projekt mit "npm run dev" gestarten. Den Browser dann auf 127.0.0.1:3000 stellen. Dann wird das reine Astroprojekt gezeigt.
