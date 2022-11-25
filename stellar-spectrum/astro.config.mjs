@@ -3,8 +3,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-    // Sitemap intergrieren
+    // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musikstudio-ziebart.de',
+    // Sitemap intergrieren
     integrations: [sitemap({})],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
