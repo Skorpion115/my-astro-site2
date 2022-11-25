@@ -7,7 +7,7 @@ export default defineConfig({
     // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musikstudio-ziebart.de',
     // Sitemap intergrieren
-    integrations: [sitemap({}), react()],
+    integrations: [sitemap(), react()],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
     trailingSlash: 'always',
