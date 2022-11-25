@@ -1,12 +1,13 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
     // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musikstudio-ziebart.de',
     // Sitemap intergrieren
-    integrations: [sitemap({})],
+    integrations: [sitemap({}), react()],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
     trailingSlash: 'always',
