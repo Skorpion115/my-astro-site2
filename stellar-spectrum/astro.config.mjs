@@ -9,6 +9,7 @@ export default defineConfig({
     integrations: [sitemap({
         customPages: ['https://www.musikstudio-ziebart.de/contact.html', 'https://www.musikstudio-ziebart.de/thanks.html'],
         entryLimit: 10000,
+        lastmod: new Date('2022-11-24'),
     })],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
