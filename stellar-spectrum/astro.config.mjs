@@ -5,8 +5,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musikstudio-ziebart.de',
-    // Sitemap intergrieren
-    integrations: [sitemap()],
+    // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde
+    integrations: [sitemap({
+        customPages: ['https://www.musikstudio-ziebart.de/contact.html', 'https://www.musikstudio-ziebart.de/thanks.html']
+    })],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
     trailingSlash: 'always',
