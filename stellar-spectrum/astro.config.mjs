@@ -7,7 +7,8 @@ export default defineConfig({
     site: 'https://musikstudio-ziebart.de',
     // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde
     integrations: [sitemap({
-        customPages: ['https://www.musikstudio-ziebart.de/contact.html', 'https://www.musikstudio-ziebart.de/thanks.html']
+        customPages: ['https://www.musikstudio-ziebart.de/contact.html', 'https://www.musikstudio-ziebart.de/thanks.html'],
+        entryLimit: 10000,
     })],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
