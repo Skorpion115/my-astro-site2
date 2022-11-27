@@ -79,7 +79,7 @@ self.addEventListener("fetch", (event) => {
             case "font":
                 response = cacheFirst(event.request);
             break;
-        case "image":
+            case "image":
             response = cacheFirst(event.request);
             break;
             default:
