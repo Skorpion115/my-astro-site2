@@ -1,5 +1,5 @@
 // Globe Variablen
-const assets = [
+/* const assets = [
     "/",
     "/instrumentenkauf",
     "/honorar",
@@ -23,19 +23,44 @@ const assets = [
     "/intervalle",
     "/triads",
     "/function_theory",
-];
+]; */
 const cacheTypes = ["main", "fonts", "image"];
 const cacheVersion = "_v3";
+//const cacheKey = "MyFancyCacheName_v1";
 
 
 self.addEventListener("install", (event) => {
     // waitUntil - hält den SW in installing status etwas zu machen bevor Event abgeschlossen wird
     event.waitUntil(
         // Zugriff auf die Cache API im Browser um komplette Requests und Response zu speichern
-        caches.open(cacheTypes[0] + cacheVersion).then(
+        caches.open(cacheTypes[0] + cacheVersion).then((cache) =>
             {
                 //Fügt alle Assets zum cache hinzu
-                return : cache.addAll(assets),
+                return cache.addAll([
+                    "/",
+                    "/instrumentenkauf",
+                    "/honorar",
+                    "/leistungen",
+                    "/faq",
+                    "/download",
+                    "/impressum",
+                    "/main.js",
+                    "/js/app",
+                    "/js/jquery-3.6.1.min.js",
+                    "/klavierunterricht",
+                    "/keyboardunterricht",
+                    "/gitarrenunterricht",
+                    "/e-bassunterricht",
+                    "/e-gitarrenunterricht",
+                    "/banjounterricht",
+                    "/akkordeon-unterricht",
+                    "/saxophonunterricht",
+                    "/klarinettenunterricht",
+                    "/noten_lesen",
+                    "/intervalle",
+                    "/triads",
+                    "/function_theory",
+                ]);
             })
         .then(self.skipWaiting())
     );
@@ -88,7 +113,7 @@ self.addEventListener("fetch", (event) => {
             default:
                 response = networkFirst(event.request);
     }
-    //event.respond.With(response);
+    event.respond.With(response);
 });
 
 // Aktivate SW
