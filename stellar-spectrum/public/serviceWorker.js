@@ -7,6 +7,9 @@ const assets = [
     "/faq",
     "/download",
     "/impressum",
+    "/main.js",
+    "/js/app",
+    "/js/jquery-3.6.1.min.js",
     "/klavierunterricht",
     "/keyboardunterricht",
     "/gitarrenunterricht",
@@ -32,7 +35,7 @@ self.addEventListener("install", (event) => {
         caches.open(cacheTypes[0] + cacheVersion).then(
             {
                 //Fügt alle Assets zum cache hinzu
-                return:cache.addAll(assets),
+                return : cache.addAll(assets),
             })
         .then(self.skipWaiting())
     );
@@ -79,7 +82,7 @@ self.addEventListener("fetch", (event) => {
             case "font":
                 response = cacheFirst(event.request);
             break;
-            case "image":
+        case "image":
             response = cacheFirst(event.request);
             break;
             default:
