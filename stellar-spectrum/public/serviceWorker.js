@@ -1,5 +1,5 @@
 // Globe Variablen
-/* const assets = [
+ const assets = [
     "/",
     "/instrumentenkauf",
     "/honorar",
@@ -23,7 +23,7 @@
     "/intervalle",
     "/triads",
     "/function_theory",
-]; */
+]; 
 const cacheTypes = ["main", "fonts", "image"];
 const cacheVersion = "_v3";
 //const cacheKey = "MyFancyCacheName_v1";
@@ -36,46 +36,23 @@ self.addEventListener("install", (event) => {
         caches.open(cacheTypes[0] + cacheVersion).then((cache) =>
             {
                 //Fügt alle Assets zum cache hinzu
-                return cache.addAll([
-                    "/",
-                    "/instrumentenkauf",
-                    "/honorar",
-                    "/leistungen",
-                    "/faq",
-                    "/download",
-                    "/impressum",
-                    "/main.js",
-                    "/js/app",
-                    "/js/jquery-3.6.1.min.js",
-                    "/klavierunterricht",
-                    "/keyboardunterricht",
-                    "/gitarrenunterricht",
-                    "/e-bassunterricht",
-                    "/e-gitarrenunterricht",
-                    "/banjounterricht",
-                    "/akkordeon-unterricht",
-                    "/saxophonunterricht",
-                    "/klarinettenunterricht",
-                    "/noten_lesen",
-                    "/intervalle",
-                    "/triads",
-                    "/function_theory",
-                ]);
+                return cache.addAll(assets);
             })
         .then(self.skipWaiting())
     );
 });
 
 function putInCache(request, response) {
-    //Console.log(request, response);
-    let cacheKey = cacheTypes.includes(request.destination)
-    ? request.destination
-    : "main";
-    caches.open(cacheKey + cacheVersion).then((cache) => {
-        cache.put(request, response);
-    })
+    Console.log(request, response);
 }
-
+    //let cacheKey = cacheTypes.includes(request.destination)
+    //? request.destination
+    //: "main";
+    //caches.open(cacheKey + cacheVersion).then((cache) => {
+        //cache.put(request, response);
+    //})
+//}
+/*
 async function cacheFirst(request) {
     let responseFromCache = await caches.match(request)
     if (responseFromCache) {
@@ -130,8 +107,10 @@ async function deleteOldCache() {
 
     // Löschen der Caches welche nicht benötigt werden
     return Promise.all(
-       cacheToDelete.map((key) => {
-        return caches.delete(key);
+       cacheToDelete.keys.map((key) => {
+        if (!cacheAllowList.includes(key)) {
+            return caches.delete(key);
+        }
        }) 
     );
 }
@@ -145,4 +124,4 @@ self.addEventListener("activate", (event) => {
             clients.claim();
         })
     );
-});
+});*/
