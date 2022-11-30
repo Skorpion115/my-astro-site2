@@ -43,16 +43,16 @@ self.addEventListener("install", (event) => {
 });
 
 function putInCache(request, response) {
-    Console.log(request, response);
+    //Console.log(request, response);
+
+    let cacheKey = cacheTypes.includes(request.destination)
+    ? request.destination
+    : "main";
+    caches.open(cacheKey + cacheVersion).then((cache) => {
+        cache.put(request, response);
+    })
 }
-    //let cacheKey = cacheTypes.includes(request.destination)
-    //? request.destination
-    //: "main";
-    //caches.open(cacheKey + cacheVersion).then((cache) => {
-        //cache.put(request, response);
-    //})
-//}
-/*
+
 async function cacheFirst(request) {
     let responseFromCache = await caches.match(request)
     if (responseFromCache) {
@@ -124,4 +124,4 @@ self.addEventListener("activate", (event) => {
             clients.claim();
         })
     );
-});*/
+});
