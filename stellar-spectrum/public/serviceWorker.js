@@ -22,7 +22,7 @@
     "/noten_lesen",
     "/intervalle",
     "/triads",
-    "/function_theory",
+    "/function_theory"
 ]; 
 const cacheTypes = ["main", "fonts", "image"];
 const cacheVersion = "_v3";
