@@ -1,10 +1,7 @@
 const CACHE_NAME = 'webapp-v1';
 const CACHE_FILES = [
     '/',
-    '/public/app.css',
-    '/public/img/_sprites.png',
-    '/public/js/app.min.js',
-    '/public/js/polyfills.min.js'
+    '/public/app.css'
 ];
 
 self.addEventListener('install', event => {
