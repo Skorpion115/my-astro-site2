@@ -1,14 +1,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-    // Adapter installiert
-    output: 'server',
-    adapter: node({
-    mode: 'standalone'
-    }),
     // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musikstudio-ziebart.de',
     // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde
