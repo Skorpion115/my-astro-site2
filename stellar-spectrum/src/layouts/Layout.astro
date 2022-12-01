@@ -68,13 +68,13 @@ const { title, description, keywords } = Astro.props;
         if (localStorage.getItem("theme") == "invert") {
           document.querySelector("body").classList.add("invert");
         }
-
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker
-            .register("/serviceWorker.js", { scope: "/" })
-            .then(() => console.log("serviceWorker registered"))
-            .catch((error) => console.warn(error));
-        }
+        
+        //if ("serviceWorker" in navigator) {
+          //navigator.serviceWorker
+            //.register("/serviceWorker.js", { scope: "/" })
+            //.then(() => console.log("serviceWorker registered"))
+            //.catch((error) => console.warn(error));
+        //}
       });
     </script>
     <!--
