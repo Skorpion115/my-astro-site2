@@ -64,7 +64,7 @@ async function networkFirst(request) {
     try {
       const responseFrameNetwork = await fetch(request);
       putInCache(request, responseFromNetwork.clone());
-      return responseFrameNetwork;
+      return responseFromNetwork;
     } catch {
       const responseFromCache = await caches.match(request);
       if (responseFromCache) {
