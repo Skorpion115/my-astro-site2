@@ -23,7 +23,7 @@
 ]; 
 const cacheTypes = ["main", "fonts", "image"];
 const cacheVersion = "_v3";
-//const cacheKey = "MyFancyCacheName_v1";
+const cacheKey = "MyFancyCacheName_v1";
 
 
 self.addEventListener("install", (event) => {
