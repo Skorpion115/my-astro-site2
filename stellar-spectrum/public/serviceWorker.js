@@ -55,14 +55,14 @@ async function cacheFirst(request) {
       return responseFromCache;
     }
   
-    let responseFrameNetwork = await fetch(request);
-    putInCache(request, responseFrameNetwork.clone());
-    return responseFrameNetwork;
+    let responseFromNetwork = await fetch(request);
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
 }
 
 async function networkFirst(request) {
     try {
-      const responseFrameNetwork = await fetch(request);
+      const responseFromNetwork = await fetch(request);
       putInCache(request, responseFromNetwork.clone());
       return responseFromNetwork;
     } catch {
