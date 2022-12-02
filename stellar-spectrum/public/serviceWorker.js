@@ -51,74 +51,30 @@ function putInCache(request, response) {
 }
 
 async function cacheFirst(request) {
-  let responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
-  }
-
-  let responseFrameNetwork = await fetch(request);
-  putInCache(request, responseFrameNetwork.clone());
-  return responseFrameNetwork;
-}
-
-async function networkFirst(request) {
-  try {
-    const responseFrameNetwork = await fetch(request);
-    putInCache(request, responseFrameNetwork.clone());
-    return responseFrameNetwork;
-  } catch {
-    const responseFromCache = await caches.match(request);
+    let responseFromCache = await caches.match(request);
     if (responseFromCache) {
       return responseFromCache;
     }
-  }
+  
+    let responseFrameNetwork = await fetch(request);
+    putInCache(request, responseFrameNetwork.clone());
+    return responseFrameNetwork;
+}
+
+async function networkFirst(request) {
+    try {
+      const responseFrameNetwork = await fetch(request);
+      putInCache(request, responseFrameNetwork.clone());
+      return responseFrameNetwork;
+    } catch {
+      const responseFromCache = await caches.match(request);
+      if (responseFromCache) {
+        return responseFromCache;
+      }
+    }
 }
 
 self.addEventListener("fetch", (event) => {
-  //console.log (event.request);
-  let response = "";
-  switch (event.request.destination) {
-    case "font":
-      response = cacheFirst(event.request);
-      break;
-    case "image":
-      response = cacheFirst(event.request);
-      break;
-    default:
-      response = networkFirst(event.request);
-  }
-  event.respond.With(response);
-});
-
-// Aktivate SW
-async function deleteOldCache() {
-  // Welche Caches sollen erhalten bleiben
-  let cacheKeepList = [];
-  cacheTypes.forEach((element) => {
-    cacheKeepList.push(element + cacheVersion);
-  });
-
-  // All caches werden ermittelt und gefiltert
-  let keyList = await caches.keys();
-  let cacheToDelete = keyList.filter((key) => !cacheKeepList.includes(key));
-
-  // Löschen der Caches welche nicht benötigt werden
-  return Promise.all(
-    cacheToDelete.keys.map((key) => {
-      if (!cacheAllowList.includes(key)) {
-        return caches.delete(key);
-      }
-    })
-  );
-}
-
-self.addEventListener("activate", (event) => {
-  console.log("service worker aktivated");
-  event.waitUntil(
-    deleteOldCache().then(() => {
-      //Damit alle Clients (Tabs im Browser) den aktivierten Service Worker nutzen
-      // sonst erst nach erneutem Reload der Seite
-      clients.claim();
-    })
-  );
+    console.log (event.request);
+    
 });
