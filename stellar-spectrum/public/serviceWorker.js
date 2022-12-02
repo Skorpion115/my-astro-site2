@@ -35,7 +35,7 @@ self.addEventListener("install", (event) => {
         //Fügt alle Assets zum cache hinzu
         return cache.addAll(assets);
       })
-      .then(self.skipWaiting())
+      //.then(self.skipWaiting())
   );
 });
 
