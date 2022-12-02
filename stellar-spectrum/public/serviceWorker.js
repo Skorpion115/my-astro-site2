@@ -1,4 +1,4 @@
-// Globe Variablen serviceWorker funktioniert
+// Globe Variablen
 const assets = [
   "/",
   "/instrumentenkauf/",
@@ -23,7 +23,6 @@ const assets = [
 ];
 const cacheTypes = ["main", "fonts", "image"];
 const cacheVersion = "_v3";
-const cacheKey = "MyFancyCacheName_v1";
 
 self.addEventListener("install", (event) => {
   // waitUntil - hält den SW in installing status etwas zu machen bevor Event abgeschlossen wird
@@ -64,7 +63,7 @@ async function cacheFirst(request) {
 async function networkFirst(request) {
     try {
       const responseFrameNetwork = await fetch(request);
-      putInCache(request, responseFrameNetwork.clone());
+      putInCache(request, responseFromNetwork.clone());
       return responseFrameNetwork;
     } catch {
       const responseFromCache = await caches.match(request);
