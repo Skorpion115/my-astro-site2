@@ -30,7 +30,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     // Zugriff auf die Cache API im Browser um komplette Requests und Response zu speichern
     caches
-      .open(cacheTypes[0] + cacheVersion + cacheKey)
+      .open(cacheTypes[0] + cacheVersion)
       .then((cache) => {
         //Fügt alle Assets zum cache hinzu
         return cache.addAll(assets);
