@@ -1,4 +1,4 @@
-// Globe Variablen
+// Globe Variablen serviceWorker funktioniert
 const assets = [
   "/",
   "/instrumentenkauf/",
