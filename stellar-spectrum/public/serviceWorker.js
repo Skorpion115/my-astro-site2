@@ -86,7 +86,7 @@ self.addEventListener("fetch", (event) => {
     default:
       response = networkFirst(event.request);
   }
-  event.respond.With(response);
+  event.respondWith(response);
 });
 
 // Aktivate SW
@@ -103,7 +103,7 @@ async function deleteOldCaches() {
 
   // Löschen der Caches welche nicht benötigt werden
   return Promise.all(
-    cacheToDelete.keys.map((key) => {
+    cacheToDelete.map((key) => {
       if (!cacheAllowList.includes(key)) {
         return caches.delete(key);
       }
@@ -114,7 +114,7 @@ async function deleteOldCaches() {
 self.addEventListener("activate", (event) => {
   console.log("service worker aktivated");
   event.waitUntil(
-    deleteOldCache().then(() => {
+    deleteOldCaches().then(() => {
       //Damit alle Clients (Tabs im Browser) den aktivierten Service Worker nutzen
       // sonst erst nach erneutem Reload der Seite
       clients.claim();
