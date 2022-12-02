@@ -75,6 +75,17 @@ async function networkFirst(request) {
 }
 
 self.addEventListener("fetch", (event) => {
-    console.log (event.request);
-    
+    //console.log (event.request);
+    let response = "";
+  switch (event.request.destination) {
+    case "font":
+      response = cacheFirst(event.request);
+      break;
+    case "image":
+      response = cacheFirst(event.request);
+      break;
+    default:
+      response = networkFirst(event.request);
+  }
+  event.respond.With(response);
 });
