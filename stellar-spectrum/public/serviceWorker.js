@@ -30,7 +30,7 @@ self.addEventListener("install", (event) => {
     // waitUntil - hält den SW in installing status etwas zu machen bevor Event abgeschlossen wird
     event.waitUntil(
         // Zugriff auf die Cache API im Browser um komplette Requests und Response zu speichern
-        caches.open(cacheTypes[0] + cacheVersion).then((cache) =>
+        caches.open(cacheTypes[0] + cacheVersion + cacheKey).then((cache) =>
             {
                 //Fügt alle Assets zum cache hinzu
                 return cache.addAll(assets);
