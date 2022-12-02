@@ -71,8 +71,8 @@ const { title, description, keywords } = Astro.props;
         
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
-            .register("/serviceWorker.js", { scope: "/" })
-            .then(() => console.log("serviceWorker registered"))
+            .register("/serviceWorker3.js", { scope: "/" })
+            .then(() => console.log("serviceWorker3 registered"))
             .catch((error) => console.warn(error));
         }
       });

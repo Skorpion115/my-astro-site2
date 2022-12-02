@@ -3,7 +3,18 @@ const CACHE_FILES = [
     '/',
     '/instrumentenkauf/',
     '/honorar/',
-    '/leistungen'
+    '/leistungen/',
+    '/faq/',
+    '/download/',
+    '/impressum/',
+    '/klavierunterricht/',
+    '/keyboardunterricht/',
+    '/gitarrenunterricht/',
+    '/e-bassunterricht/',
+    '/e-gitarrenunterricht/',
+    '/banjounterricht/',
+    '/akkordeonunterricht/',
+    '/saxophonunterricht/'
 ];
 
 self.addEventListener('install', event => {
