@@ -1,16 +1,28 @@
 {
-    "name": "Programmieren mit Mario",
-    "short_name": "Mit Mario",
-    "description": "Webentwicklung einfach starten - Alles rundum Webentwicklung Webdesign und angrenzende Themen",
+    "name": "Musikstudio Ziebart",
+    "short_name": "Mit Rudi",
+    "description": "Musikunterricht in Eibach",
     "start_url": "/",
     "display": "fullscreen",
     "theme_color": "#191919",
     "background_color": "#191919",
     "icons": [
       {
-        "src": "icons/manifest-icon-16.favicon.ico",
-        "sizes": "16x16",
-        "type": "image/ico",
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
         "purpose": "any"
       }
     ]
