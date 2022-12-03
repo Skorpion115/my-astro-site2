@@ -21,7 +21,7 @@ const assets = [
   "/triads/",
   "/functional_theory/"
 ];
-const cacheTypes = ["main", "fonts", "image"];
+const cacheTypes = ["main", "font", "image"];
 const cacheVersion = "_v3";
 
 self.addEventListener("install", (event) => {
