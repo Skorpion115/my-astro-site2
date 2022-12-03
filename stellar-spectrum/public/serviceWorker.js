@@ -19,7 +19,7 @@ const assets = [
   "/noten_lesen/",
   "/intervalle/",
   "/triads/",
-  "/functional_theory/"
+  "/functional_theory/",
 ];
 const cacheTypes = ["main", "font", "image"];
 const cacheVersion = "_v3";
@@ -28,13 +28,11 @@ self.addEventListener("install", (event) => {
   // waitUntil - hält den SW in installing status etwas zu machen bevor Event abgeschlossen wird
   event.waitUntil(
     // Zugriff auf die Cache API im Browser um komplette Requests und Response zu speichern
-    caches
-      .open(cacheTypes[0] + cacheVersion)
-      .then((cache) => {
-        //Fügt alle Assets zum cache hinzu
-        return cache.addAll(assets);
-      })
-      //.then(self.skipWaiting())
+    caches.open(cacheTypes[0] + cacheVersion).then((cache) => {
+      //Fügt alle Assets zum cache hinzu
+      return cache.addAll(assets);
+    })
+    //.then(self.skipWaiting())
   );
 });
 
@@ -50,32 +48,32 @@ function putInCache(request, response) {
 }
 
 async function cacheFirst(request) {
-    let responseFromCache = await caches.match(request);
-    if (responseFromCache) {
-      return responseFromCache;
-    }
-  
-    let responseFromNetwork = await fetch(request);
-    putInCache(request, responseFromNetwork.clone());
-    return responseFromNetwork;
+  let responseFromCache = await caches.match(request);
+  if (responseFromCache) {
+    return responseFromCache;
+  }
+
+  let responseFromNetwork = await fetch(request);
+  putInCache(request, responseFromNetwork.clone());
+  return responseFromNetwork;
 }
 
 async function networkFirst(request) {
-    try {
-      const responseFromNetwork = await fetch(request);
-      putInCache(request, responseFromNetwork.clone());
-      return responseFromNetwork;
-    } catch {
-      const responseFromCache = await caches.match(request);
-      if (responseFromCache) {
-        return responseFromCache;
-      }
+  try {
+    const responseFromNetwork = await fetch(request);
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+  } catch {
+    const responseFromCache = await caches.match(request);
+    if (responseFromCache) {
+      return responseFromCache;
     }
+  }
 }
 
 self.addEventListener("fetch", (event) => {
-    //console.log (event.request);
-    let response = "";
+  //console.log (event.request);
+  let response = "";
   switch (event.request.destination) {
     case "font":
       response = cacheFirst(event.request);
