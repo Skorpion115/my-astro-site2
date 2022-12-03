@@ -19,7 +19,7 @@ const assets = [
   "/noten_lesen/",
   "/intervalle/",
   "/triads/",
-  "/functional_theory/",
+  "/functional_theory/"
 ];
 const cacheTypes = ["main", "fonts", "image"];
 const cacheVersion = "_v3";
