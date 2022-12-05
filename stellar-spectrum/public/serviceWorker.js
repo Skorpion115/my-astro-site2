@@ -20,6 +20,7 @@ const assets = [
   "/intervalle/",
   "/triads/",
   "/functional_theory/",
+  "/manifest-icon-192.maskable.png/"
 ];
 const cacheTypes = ["main", "font", "image"];
 const cacheVersion = "_v3";
