@@ -1,24 +1,29 @@
 {
     "name": "Musikstudio Ziebart",
     "short_name": "Mit Rudi",
-    "icons": [
-        {
-            "src": "img/fav/android-icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "density": "0.75"
-        },
-        {
-            "src": "img/fav/android-icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "density": "1.0"
-        }
-    ],
-    "lang": "de",
+    "description": "Musikunterricht in Eibach",
     "start_url": "/",
-    "display": "standalone",
-    "orientation": "portrait",
+    "display": "fullscreen",
     "theme_color": "#191919",
-    "background_color": "#191919"
-}
+    "background_color": "#191919",
+    "icons": [
+      {
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }
