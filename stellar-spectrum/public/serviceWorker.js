@@ -19,8 +19,7 @@ const assets = [
   "/noten_lesen/",
   "/intervalle/",
   "/triads/",
-  "/functional_theory/",
-  "/manifest-icon-192.maskable.png/"
+  "/functional_theory/"
 ];
 const cacheTypes = ["main", "font", "image"];
 const cacheVersion = "_v3";
