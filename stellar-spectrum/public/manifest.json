@@ -3,6 +3,7 @@
     "short_name": "Mit Rudi",
     "description": "Musikunterricht in Eibach",
     "start_url": "/",
+    "scope": "/",
     "display": "fullscreen",
     "theme_color": "#191919",
     "background_color": "#191919",
