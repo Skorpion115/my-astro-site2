@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import usesData from "../assets/data/index.json";
 ---
 
 <Layout
@@ -89,8 +88,13 @@ import usesData from "../assets/data/index.json";
       <hr />
       <p>
         Mehr Info:<br />
+        <a
+          href="https://www.youtube.com/channel/UCwRRdmLAvaERcd0K_WPMZMw/videos"
+          target="_blank"
+          class="link-blue"
+          ><b>[Mein You Tube Kanal]</b>
+        </a>
       </p>
-      
       <p>
         Es ist f&uuml;r alle Hammond Fans was dabei! Auch E-Gitarristen und
         Akustische Gitarre kommen auf ihre Kosten. Das klassische Klavier ist
@@ -176,9 +180,6 @@ import usesData from "../assets/data/index.json";
         <li><a href="/download/" class="link-grey">[Download]</a></li>
         <li><a href="/impressum/" class="link-grey">[Impressum]</a></li>
       </ul>
-      { usesData.map((uses) => (
-        <h2>{uses.title}</h2>
-      )) }
       <p>
         Erstellt mit dem Framework <a
           href="https://astro.build"
