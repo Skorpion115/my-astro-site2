@@ -6,6 +6,16 @@
     "display": "fullscreen",
     "theme_color": "#191919",
     "background_color": "#191919",
+    "protocol_handlers": [
+      {
+        "protocol": "web+jngl",
+        "url": "/lookup?type=%s"
+      },
+      {
+        "protocol": "web+jnglstore",
+        "url": "/shop?for=%s"
+      }
+    ],
     "icons": [
       {
         "src": "icons/manifest-icon-192.maskable.png",
