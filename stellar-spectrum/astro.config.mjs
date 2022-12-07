@@ -3,6 +3,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+    // static oder server SSR serverseitiges rändern
+    output: 'static',
     // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musikstudio-ziebart.de',
     // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde
