@@ -37,10 +37,10 @@ body {
 }
 
 body.invert {
-  --color-black: #ffe8d4;
+  --color-black: #ffe8de;
   --color-white: #191919;
   --color-grey: #6e6e6e;
-  --color-green: #048339;
+  --color-green: #007932;
   --color-red: #c70636;
   --color-purple: #800257;
   --color-yellow: #e37e02;
@@ -76,6 +76,7 @@ p {
   font-weight: normal;
   padding: 1.25rem;
   text-align: start;
+
 }
 
 /* ANCHOR root Element html-Element */
