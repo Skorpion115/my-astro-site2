@@ -38,7 +38,7 @@ body {
 
 body.invert {
   --color-black: #ffe8de;
-  --color-white: #191919;
+  --color-white: #000000;
   --color-grey: #6e6e6e;
   --color-green: #007932;
   --color-red: #c70636;
