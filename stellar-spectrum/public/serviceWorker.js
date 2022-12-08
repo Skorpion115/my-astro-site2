@@ -43,7 +43,7 @@ function putInCache(request, response) {
     ? request.destination
     : "main";
   caches.open(cacheKey + cacheVersion).then((cache) => {
-    cache.put(request, response);
+    caches.match(request, response);
   });
 }
 
