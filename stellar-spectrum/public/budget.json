@@ -1,0 +1,54 @@
+[{
+    "path": "lighthouse https://www.musikstudio-ziebart.de --budget-path=./budget.json",
+    "timings": [{
+            "metric": "interactive",
+            "budget": 3500
+        },
+        {
+            "metric": "first-contentful-paint",
+            "budget": 3300
+        },
+        {
+            "metric": "total-blocking-time",
+            "budget": 170
+        }
+    ],
+    "resourceSizes": [{
+            "resourceType": "document",
+            "budget": 27
+        },
+        {
+            "resourceType": "fonts",
+            "budget": 176.0
+        },
+        {
+            "resourceType": "script",
+            "budget": 455.9
+        },
+        {
+            "resourceType": "total",
+            "budget": 1023
+        },
+        {
+            "resourceType": "stylesheet",
+            "budget": 0
+        },
+        {
+            "resourceType": "third-party",
+            "budget": 197
+        }
+    ],
+    "resourceCounts": [{
+            "resourceType": "script",
+            "budget": 316
+        },
+        {
+            "resourceType": "stylesheet",
+            "budget": 100
+        },
+        {
+            "resourceType": "third-party",
+            "budget": 182
+        }
+    ]
+}]
