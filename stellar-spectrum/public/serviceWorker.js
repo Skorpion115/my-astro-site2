@@ -28,7 +28,7 @@ self.addEventListener("install", (event) => {
   // waitUntil - hält den SW in installing status etwas zu machen bevor Event abgeschlossen wird
   event.waitUntil(
     // Zugriff auf die Cache API im Browser um komplette Requests und Response zu speichern
-    caches.open(cacheTypes[0] + cacheVersion).then((cache) => {
+    self.caches.open(cacheTypes[0] + cacheVersion).then((cache) => {
       //Fügt alle Assets zum cache hinzu
       return cache.addAll(assets);
     })
@@ -43,7 +43,7 @@ function putInCache(request, response) {
     ? request.destination
     : "main";
   caches.open(cacheKey + cacheVersion).then((cache) => {
-    caches.match(request, response);
+    self.caches.match(request, response);
   });
 }
 
@@ -84,7 +84,25 @@ self.addEventListener("fetch", (event) => {
     default:
       response = networkFirst(event.request);
   }
-  event.respondWith(response);
+  event.respondWith(
+    self.caches.match(event.request)
+    .then((response) => {
+      if (response) {
+        return response; // cached response
+      }
+
+      const fetchRequest = event.request.clone();
+      return fetch(fetchRequest).then((response) => {
+        if(!response || response.status !==200 || response.type !== "basic") {
+          return response; // network respone which should not be cached
+        }
+        const responseToCache = response.clone();
+        self.caches.open(cacheTypes[0] + cacheVersion)
+        .then((cache) => cache.put(event.request, responseToCache)); // update cache
+        return response; // network response
+      })
+    })
+  )
 });
 
 // Aktivate SW
