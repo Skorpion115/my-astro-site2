@@ -1,21 +1,13 @@
 {
     "name": "Musikstudio Ziebart",
-    "short_name": "Mit Rudi",
-    "description": "Musikunterricht in Eibach",
+    "short_name": "Rudi Ziebart",
+    "description": "Musikunterricht in Nürnberg",
+    "lang": "de",
     "start_url": "/",
     "display": "fullscreen",
+    "orientation": "portrait",
     "theme_color": "#191919",
     "background_color": "#191919",
-    "protocol_handlers": [
-      {
-        "protocol": "web+jngl",
-        "url": "/lookup?type=%s"
-      },
-      {
-        "protocol": "web+jnglstore",
-        "url": "/shop?for=%s"
-      }
-    ],
     "icons": [
       {
         "src": "manifest-icon-192.maskable.png",
