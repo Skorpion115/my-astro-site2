@@ -28,11 +28,13 @@ self.addEventListener("install", (event) => {
   // waitUntil - hält den SW in installing status etwas zu machen bevor Event abgeschlossen wird
   event.waitUntil(
     // Zugriff auf die Cache API im Browser um komplette Requests und Response zu speichern
-    self.caches.open(cacheTypes[0] + cacheVersion).then((cache) => {
-      //Fügt alle Assets zum cache hinzu
-      return cache.addAll(assets);
-    })
-    //.then(self.skipWaiting())
+    caches
+      .open(cacheTypes[0] + cacheVersion)
+      .then((cache) => {
+        //Fügt alle Assets zum cache hinzu
+        return cache.addAll(assets);
+      })
+      //.then(self.skipWaiting())
   );
 });
 
@@ -43,37 +45,37 @@ function putInCache(request, response) {
     ? request.destination
     : "main";
   caches.open(cacheKey + cacheVersion).then((cache) => {
-    self.caches.match(request, response);
+    caches.match(request, response);
   });
 }
 
 async function cacheFirst(request) {
-  let responseFromCache = await caches.match(request);
-  if (responseFromCache) {
-    return responseFromCache;
-  }
-
-  let responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
-  return responseFromNetwork;
-}
-
-async function networkFirst(request) {
-  try {
-    const responseFromNetwork = await fetch(request);
-    putInCache(request, responseFromNetwork.clone());
-    return responseFromNetwork;
-  } catch {
-    const responseFromCache = await caches.match(request);
+    let responseFromCache = await caches.match(request);
     if (responseFromCache) {
       return responseFromCache;
     }
-  }
+  
+    let responseFromNetwork = await fetch(request);
+    putInCache(request, responseFromNetwork.clone());
+    return responseFromNetwork;
+}
+
+async function networkFirst(request) {
+    try {
+      const responseFromNetwork = await fetch(request);
+      putInCache(request, responseFromNetwork.clone());
+      return responseFromNetwork;
+    } catch {
+      const responseFromCache = await caches.match(request);
+      if (responseFromCache) {
+        return responseFromCache;
+      }
+    }
 }
 
 self.addEventListener("fetch", (event) => {
-  //console.log (event.request);
-  let response = "";
+    //console.log (event.request);
+    let response = "";
   switch (event.request.destination) {
     case "font":
       response = cacheFirst(event.request);
@@ -84,33 +86,15 @@ self.addEventListener("fetch", (event) => {
     default:
       response = networkFirst(event.request);
   }
-  event.respondWith(
-    self.caches.match(event.request)
-    .then((response) => {
-      if (response) {
-        return response; // cached response
-      }
-
-      const fetchRequest = event.request.clone();
-      return fetch(fetchRequest).then((response) => {
-        if(!response || response.status !==200 || response.type !== "basic") {
-          return response; // network respone which should not be cached
-        }
-        const responseToCache = response.clone();
-        self.caches.open(cacheTypes[0] + cacheVersion)
-        .then((cache) => cache.put(event.request, responseToCache)); // update cache
-        return response; // network response
-      })
-    })
-  )
+  event.respondWith(response);
 });
 
 // Aktivate SW
 async function deleteOldCaches() {
   // Welche Caches sollen erhalten bleiben
   let cacheKeepList = [];
-  cacheTypes.forEach((element) => {
-    cacheKeepList.push(element + cacheVersion);
+  cacheTypes.forEach((image) => {
+    cacheKeepList.push(image + cacheVersion);
   });
 
   // All caches werden ermittelt und gefiltert
