@@ -44,7 +44,7 @@ function putInCache(request, response) {
   let cacheKey = cacheTypes.includes(request.destination)
     ? request.destination
     : "main";
-  caches.open(cacheKey + cacheVersion).then((cache) => {
+  caches.open(cacheKey + cacheVersion).then((caches) => {
     caches.match(request, response);
   });
 }
