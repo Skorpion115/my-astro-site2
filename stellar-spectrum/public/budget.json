@@ -10,7 +10,7 @@
         },
         {
             "metric": "total-blocking-time",
-            "budget": 170
+            "budget": 300
         }
     ],
     "resourceSizes": [{
@@ -44,11 +44,11 @@
         },
         {
             "resourceType": "stylesheet",
-            "budget": 100
+            "budget": 0
         },
         {
             "resourceType": "third-party",
-            "budget": 182
+            "budget": 452
         }
     ]
 }]
