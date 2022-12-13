@@ -22,8 +22,8 @@
 }
 /* ANCHOR Custom Properties */
 body {
-  --color-black: #191919;
-  --color-white: #e1e1e1;
+  --color-black: #000000;
+  --color-white: #ffffff;
   --color-grey: #a3a3a3;
   --color-green: #13f270;
   --color-red: #fc1a52;
@@ -31,6 +31,7 @@ body {
   --color-yellow: #c1de04;
   --color-blue: #03bfee;
   --color-blau: #336699;
+  --color-brown: #ffe8de;
   --font: "IBM", sans-serif;
   --line: 3ch;
   --font-scale: 0.4vw;
@@ -46,6 +47,7 @@ body.invert {
   --color-yellow: #e37e02;
   --color-blue: #0856af;
   --color-blau: #41dce1;
+  --color-brown: #5e311f;
 }
 
 /* ANCHOR General Style */
@@ -236,6 +238,10 @@ nav > ul {
 
 .text-blau {
   --color-blau: #336699;
+}
+
+.text-brown {
+  --color-brown: #ffe8de;
 }
 
 
