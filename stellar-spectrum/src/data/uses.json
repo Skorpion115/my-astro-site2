@@ -1,18 +1,21 @@
 [
     {
-        "title": "Youtube",
+        "title": "YouTube",
         "elements": [
             {
                 "title": "[Mein You Tube Kanal]",
-                "comment": "Für meine tägliche Arbeit",
                 "link": "https://www.youtube.com/channel/UCwRRdmLAvaERcd0K_WPMZMw/videos"
-            },
+            }
+        ]
+    },
+    {
+        "title": "Instrumentenkauf",
+        "elements": [
             {
                 "title": "[Musik Klier]",
-                "comment": "Größte Musikgeschäft in Nürnberg",
+                "comment": "Musikhaus",
                 "link": "https://www.musik-klier.de"
             }
-
         ]
     }
 ]

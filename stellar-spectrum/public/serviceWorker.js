@@ -93,8 +93,8 @@ self.addEventListener("fetch", (event) => {
 async function deleteOldCaches() {
   // Welche Caches sollen erhalten bleiben
   let cacheKeepList = [];
-  cacheTypes.forEach((image) => {
-    cacheKeepList.push(image + cacheVersion);
+  cacheTypes.forEach((element) => {
+    cacheKeepList.push(element + cacheVersion);
   });
 
   // All caches werden ermittelt und gefiltert

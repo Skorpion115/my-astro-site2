@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import usesdata from "../data/uses.json";
+import usesData from "../data/uses.json";
 ---
 
 <Layout
@@ -107,46 +107,26 @@ import usesdata from "../data/uses.json";
         </a>
       </p>
       <hr />
+      {
+        usesData.map((uses) => (
+        <>
+          <h2>{uses.title}</h2>
+          <ul>
+            {uses.elements.map((element) => (
+              <li>
+                <a href={element.link} target="_blank" 
+                class="link-blue">{element.title}</a>
+                <span class="text-white">{element.comment}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+        )) 
+      }
       <p>
-        Mehr Info:<br />
-        <a
-          href="https://www.youtube.com/channel/UCwRRdmLAvaERcd0K_WPMZMw/videos"
-          target="_blank"
-          class="link-blue"
-          ><b>[Mein You Tube Kanal]</b>
-        </a>
-      </p>
-      <ul>
-        <li>
-          <a
-          href="https://www.youtube.com/channel/UCwRRdmLAvaERcd0K_WPMZMw/videos"
-          target="_blank"
-          class="link-blue"
-          ><b>[Mein You Tube Kanal]</b>
-        </a>
-        <span class="text-grey text-smaller">// Für meine tägliche Arbeit</span>
-        </li>
-      </ul>
-      <p>
-        Es ist f&uuml;r alle Hammond Fans was dabei! Auch E-Gitarristen und
-        Akustische Gitarre kommen auf ihre Kosten. Das klassische Klavier ist
+        Auf meinem YouTube Kanal ist f&uuml;r alle Hammond Fans was dabei! Auch E-Gitarristen und
+        Akustische Gitarre kommen auf ihre Kosten. Übrigens das klassische Klavier ist
         bei den Menschen immer noch hoch im Kurs!
-      </p>
-      <hr />
-      <h2>Tip!</h2>
-      <p>
-        Instrumente kaufen bei<br />
-        <br />
-        <a href="https://www.musik-klier.de" class="link-blue" target="_blank"
-          >[Musik Klier]</a
-        >
-        <br />Wölckernstraße 29 <br />90459 Nürnberg
-        <br />
-        <br /> Telefon:
-        <a href="tel:+49911439900" class="link-blue">[+49 (0)911439900]</a>
-        <br />0911/439900
-        <br />
-        <br /> Internet: https://www.musik-klier.de
       </p>
       <hr />
       <h2>Kontakt</h2>
@@ -197,6 +177,7 @@ import usesdata from "../data/uses.json";
       <p>Montag - Freitag 14.00 - 19.00 Uhr</p>
       <hr />
       <br />
+      
       <picture>
         <source srcset="/images/rudi-wide.webp" media="(min-width: 600px)" />
         <img
@@ -207,6 +188,7 @@ import usesdata from "../data/uses.json";
         />
       </picture>
       <hr />
+      
       <ul>
         <li><a href="/faq/" class="link-blue">[FAQ]</a></li>
         <li><a href="/download/" class="link-blue">[Download]</a></li>
@@ -216,22 +198,7 @@ import usesdata from "../data/uses.json";
         Erstellt mit dem Framework <a
           href="https://astro.build"
           class="link-blue">{Astro.generator}</a>
-      </p>
-      {
-        usesdata.map((uses) => (
-        <>
-          <h2>{uses.title}</h2>
-          <ul>
-            {elements.map((element) => (
-              <li>
-                <a href={element.link} target="_blank" class="link-blue">{element.title}</a>
-                <span class="text-grey text-smaller">{element.comment}</span>
-              </li>
-            ))}
-          </ul>
-        </>
-        ))
-      }
+      </p>    
     </section>
   </article>
 </Layout>
