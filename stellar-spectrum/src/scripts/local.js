@@ -1,4 +1,5 @@
 // Google Tag Manager wird alles gebündelt
+/*
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -8,12 +9,11 @@
     j.async = true;
     j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
     f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", "GTM-5F9WD6T");
+  })(window, document, "script", "dataLayer", "GTM-5F9WD6T"); */
 
 // End Google Tage Manager
 
 // Global site tag (gtag.js) - Google Analytics 
-// <script async src="https://www.googletagmanager.com/gtag/js?id=G-66Z7DSTCPC"></script> ist im Layout.astro
 
   window.dataLayer = window.dataLayer || [];
 
