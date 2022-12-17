@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "repository": {
+    "Typ": "git",
+    "URL": "https://github.com/Skorpion115/my-astro-site2/tree/main/stellar-spectrum"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
