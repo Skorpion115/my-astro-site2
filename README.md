@@ -8,4 +8,3 @@
 
  Ich würde mich auch auf eine Zusammenarbeit mit anderen Webentwicklern Developer sehr freuen!
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4fc21658-98e2-47bb-b23f-c66faf13f5a2/deploy-status)](https://app.netlify.com/sites/tangerine-faun-c6fe17/deploys)
