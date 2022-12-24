@@ -50,7 +50,7 @@ if (isValid()) {
             /* Legt den Emfänger fest */
             $empfaenger = 'musikstudio-ziebart@outlook.de';
             $betreff = 'Neuer Eintrag';
-            $from = "From: Rudi Ziebart <postmaster@musikstudio-ziebart.de>\r\n";
+            $from = "From: Rudi Ziebart <postmaster@musicstudio-ziebart.de>\r\n";
             /* Baut die Mail zusammen*/
             $from .= 'Geburtsdatum: ' . $geburtsdatum . "\n";
             $from .= 'Wunschtermin: ' . $wunschtermin . "\n";
