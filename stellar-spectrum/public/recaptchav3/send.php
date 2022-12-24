@@ -48,7 +48,7 @@ if (isValid()) {
             $postleitzahl = $_POST['postal_code'];
             $eltern = $_POST['parents'];
             /* Legt den Emfänger fest */
-            $empfaenger = 'musikstudio-ziebart@outlook.de';
+            $empfaenger = 'musikstudio.ziebart@gmail.com';
             $betreff = 'Neuer Eintrag';
             $from = "From: Rudi Ziebart <postmaster@musikstudio-ziebart.de>\r\n";
             /* Baut die Mail zusammen*/
