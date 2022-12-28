@@ -45,7 +45,7 @@ window.addEventListener("load", function(){ // Eigene Datei
                         }
                         document.querySelector("#alert").innerText = responseText.success
                         document.querySelector("#alert").classList.add("success")
-                        window.location.replace("/recaptchev3/thanks.html")
+                        window.location.replace("/thanks/")
                     })
                 })
             })
