@@ -1,4 +1,7 @@
 # Neues Astro Projekt mit serviceWorker und manifest PWA
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eee55d72-a193-41af-ab58-08dc0872f42d/deploy-status)](https://app.netlify.com/sites/loquacious-caramel-7dae90/deploys)
+
  Ein neues Astro Projekt. Es ist aufgebaut von einem Videotutorial von Mario Laurich über das Framework Astro. Das Projekt beinhaltet auch ein komplettes Anmeldeformular mit recaptcha Version 3. Diese Internetseite ist frei verfügbar. Ich erhebe keinerlei Lizensen.
 
  Es sind in dem Astro Projekt nur die Astro Dateien enthalten, den "/dist" Ordner für die Veröffentlichung habe ich nicht hochgeladen! Man kann auch ohne dem "/dist" Ordner die Datein starten und wer möchte kann sich ja dann den "/dist" Ordner mit dem Befehl: "npm run build" ausgeben lassen. Ansonsten wird das Astro Projekt mit "npm run dev" gestarten. Den Browser dann auf 127.0.0.1:3000 stellen. Dann wird das reine Astroprojekt gezeigt.
@@ -7,4 +10,3 @@
  Das ganze ist eine Progressive Web App PWA geworden. Ein serviceWorker und eine mainifest Datei ist dabei.
 
  Ich würde mich auch auf eine Zusammenarbeit mit anderen Webentwicklern Developer sehr freuen!
-
