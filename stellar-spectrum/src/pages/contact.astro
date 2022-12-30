@@ -8,8 +8,8 @@ import Layout from "../layouts/Layout.astro";
   keywords="Kontakt"
 >
 <h2>Contact Form</h2>
-<form method="post" name="Contact Form 2" action="/thankyou/" data-netlify-recaptcha="true" netlify-honeypot="hpfield" data-netlify="true">
-    <input class="hidden" name="hpfield">
+<form method="post" name="Contact Form 2" action="/thankyou/" data-netlify-recaptcha="true" data-netlify="true">
+    <input type="hidden" name="form-name" value="Contact Form 2" />
 <p>
     <label for="name">Name:</label>
     <input type="text" name="name" id="name">
@@ -29,9 +29,3 @@ import Layout from "../layouts/Layout.astro";
 </form>
 
 </Layout>
-
-<style>
-    .hidden {
-    display:none
-}
-</style>
