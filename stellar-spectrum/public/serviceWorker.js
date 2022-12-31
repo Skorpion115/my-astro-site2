@@ -7,6 +7,7 @@ const assets = [
   "/faq/",
   "/download/",
   "/impressum/",
+  "/contact/",
   "/klavierunterricht/",
   "/keyboardunterricht/",
   "/gitarrenunterricht/",

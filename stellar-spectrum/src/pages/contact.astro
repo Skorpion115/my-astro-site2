@@ -7,161 +7,205 @@ import Layout from "../layouts/Layout.astro";
   description="Kostenloser Probeunterricht"
   keywords="Kontakt"
 >
-  <h2>Contact Form</h2>
-  <form
-    method="post"
-    name="Contact Form 2"
-    action="/thankyou/"
-    data-netlify-recaptcha="true"
-    data-netlify="true"
-  >
-    <fieldset>
-      <legend>Daten</legend>
-      <input type="hidden" name="form-name" value="Contact Form 2" />
-      <div class="formfields"></div>
-      <br />
-      <div class="form-element">
-        <input
-          type="date"
-          name="born"
-          id="born"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Geburtsdatum</div>
-      </div>
-      <br />
-      <div class="form-element">
-        <input
-          type="datetime-local"
-          name="desired_date"
-          id="desired_date"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Wunschtermin mit Uhrzeit</div>
-      </div>
-      <br />
-      <div class="form-element">
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Telefonnummer *"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Telefonnummer</div>
-      </div>
-      <br />
-      <div>
-        <input
-          type="text"
-          name="instrument"
-          id="instrument"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Instrument</div>
-      </div>
-      <br />
-      <div>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Email</div>
-      </div>
-      <br />
-      <br />
-      <div>
+  <div class="container">
+    <h2>Kontaktformular</h2>
+    <form
+      method="post"
+      name="Contact Form 2"
+      action="/thankyou/"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
+    >
+      <fieldset>
+        <legend>Daten</legend>
+        <input type="hidden" name="form-name" value="Contact Form 2" />
+        <div class="formfields"></div>
         <br />
-        <textarea
-          name="comments"
-          id="comments"
-          cols="30"
-          rows="10"
-          class="form-control"
-          placeholder="Wie kann ich Ihnen helfen? *"></textarea>
-        <div class="invalid-feedback">Nachricht</div>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Adresse</legend>
-      <div>
-        <input
-          type="text"
-          name="fname"
-          id="fname"
-          placeholder="Vorname *"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Vorname</div>
-      </div>
+        <div class="form-element">
+          <input
+            type="date"
+            name="born"
+            id="born"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Geburtsdatum</div>
+        </div>
+        <br />
+        <div class="form-element">
+          <input
+            type="datetime-local"
+            name="desired_date"
+            id="desired_date"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Wunschtermin mit Uhrzeit</div>
+        </div>
+        <br />
+        <div class="form-element">
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Telefonnummer *"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Telefonnummer</div>
+        </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            name="instrument"
+            id="instrument"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Instrument</div>
+        </div>
+        <br />
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Email</div>
+        </div>
+        <br />
+        <br />
+        <div>
+          <br />
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+            class="form-control"
+            placeholder="Wie kann ich Ihnen helfen? *"></textarea>
+          <div class="invalid-feedback">Nachricht</div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Adresse</legend>
+        <div>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Vorname *"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Vorname</div>
+        </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Nachname *"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Nachname</div>
+        </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            name="street"
+            id="street"
+            maxlength="22"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Strasse</div>
+        </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            name="place"
+            id="place"
+            maxlength="20"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Ort</div>
+        </div>
+        <br />
+        <div>
+          <input
+            type="number"
+            name="postal_code"
+            id="postal_code"
+            placeholder="Postleitzahl *"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Postleitzahl</div>
+        </div>
+      </fieldset>
       <br />
-      <div>
-        <input
-          type="text"
-          name="lname"
-          id="lname"
-          placeholder="Nachname *"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Nachname</div>
-      </div>
-      <br />
-      <div>
-        <input
-          type="text"
-          name="street"
-          id="street"
-          maxlength="22"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Strasse</div>
-      </div>
-      <br />
-      <div>
-        <input
-          type="text"
-          name="place"
-          id="place"
-          maxlength="20"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Ort</div>
-      </div>
-      <br />
-      <div>
-        <input
-          type="number"
-          name="postal_code"
-          id="postal_code"
-          placeholder="Postleitzahl *"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Postleitzahl</div>
-      </div>
-    </fieldset>
-    <br />
-    <fieldset>
-      <div>
-        <input
-          type="text"
-          name="parents"
-          id="parents"
-          class="form-control form-control-lg"
-        />
-        <div class="invalid-feedback">Eltern</div>
-      </div>
-    </fieldset>
-    <div data-netlify-recaptcha="true"></div>
+      <fieldset>
+        <div>
+          <input
+            type="text"
+            name="parents"
+            id="parents"
+            class="form-control form-control-lg"
+          />
+          <div class="invalid-feedback">Eltern</div>
+        </div>
+      </fieldset>
+      <div data-netlify-recaptcha="true"></div>
 
-    <div>
-      <input type="submit" class="btn btn-lg btn-primary" />
-    </div>
-  </form>
+      <div>
+        <input type="submit" class="btn btn-lg btn-primary" />
+      </div>
+    </form>
+  </div>
 </Layout>
 
 <style>
+  .container {
+    margin: 0 auto;
+    padding: 5%;
+  }
+
+  fieldset legend {
+    color: #828282;
+    font-size: 1.5rem;
+    padding: 0.625rem;
+}
+
+  fieldset {
+    color: #828282;
+    background-color: #191919;
+}
+
+  /* ganze Formular */
+  .form-element {
+    background-color: #1b1c1e;
+  }
+
+  /* Beschreibung der Felder unten */
+  .invalid-feedback {
+    background-color: #1b1c1e;
+    color: #828282;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  }
+
+  /* Der Rand um die Felder */
+  .form-control {
+    border-radius: 0px;
+    border: 1px solid #333;
+  }
+
+  /* Die Breite der Felder */
+  .form-control.form-control-lg {
+    height: calc(3.5rem + 2px);
+    padding: 1rem 0.75rem;
+    font-size: 1.125rem;
+  }
+
   form {
     max-width: 31.25rem;
     margin: 0 auto;
@@ -170,14 +214,8 @@ import Layout from "../layouts/Layout.astro";
     font-size: 1.125rem;
   }
 
-  .form-control {
-    border-radius: 0px;
-    border: 1px solid #333;
-  }
-
   select,
-  option,
-  label {
+  option {
     display: block;
     margin: 0 auto;
     width: 100%;
@@ -185,39 +223,58 @@ import Layout from "../layouts/Layout.astro";
     text-align: center;
     font-size: 1.125rem;
   }
-  /* Die Breite der Felder */
-  .form-control.form-control-lg {
-    height: calc(3.5rem + 2px);
-    padding: 1rem 0.75rem;
-    font-size: 1.125rem;
-  }
 
   .form-control::placeholder {
     font-size: 1.125rem;
   }
 
-  input,
-textarea {
   /* Schriftgröße im Ausfüllbereich */
-  font-size: 1.125rem;
-  padding: 0.625rem;
-}
+  input,
+  textarea {
+    background-color: #1b1c1e;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+    color: #fff;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  }
 
-  button[type=submit] {
-  background-color: #545557;
-  padding: 0.94rem 7rem;
-  border: 0;
-  color: white;
-  font-size: 1.125rem;
-  border-bottom: none;
-  margin-top: 1.875rem;
-  cursor: pointer;
-  transition: all 0.3 ease;
-  text-align: center;
-}
+  .btn {
+    border-radius: 0;
+    border: 0;
+    color: white;
+  }
 
-button[type=submit]:hover {
-  background-color: #fff;
-  color: black;
-}
+  .btn.btn-primary {
+    background-color: #545557;
+    padding: 0.94rem 7rem;
+    font-size: 1.125rem;
+    margin-top: 1.875rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    text-align: center;
+  }
+
+  .btn.btn-primary:hover {
+    background-color: #fff;
+    color: black;
+  }
+  /*
+  button[type="submit"] {
+    background-color: #545557;
+    padding: 0.94rem 7rem;
+    border: 0;
+    color: white;
+    font-size: 1.125rem;
+    border-bottom: none;
+    margin-top: 1.875rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    text-align: center;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #fff;
+    color: black;
+  } */
 </style>
