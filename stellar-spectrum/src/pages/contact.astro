@@ -162,6 +162,47 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </form>
   </div>
+
+  <h1>Freie Termine</h1>
+
+  <div>
+    <!-- Tabelle für freie Termine-->
+    <table>
+      <thead>
+        <tr>
+          <th>Dienstag</th>
+          <th>Mittwoch</th>
+          <th>Donnerstag</th>
+          <th>Freitag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>14:00</td>
+          <td>15:00</td>
+          <td>15:30</td>
+          <td>15:15</td>
+        </tr>
+        <tr>
+          <td>15:30</td>
+          <td>15:30</td>
+          <td>16:00</td>
+          <td>16:30</td>
+        </tr>
+        <tr>
+          <td>16.00</td>
+          <td>16:00</td>
+          <td>16:30</td>
+          <td>17:30</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <p>
+      <a href="../index.html" class="link-blue">zurück</a>
+    </p>
+    <br />
+  </div>
 </Layout>
 
 <style>
@@ -174,12 +215,12 @@ import Layout from "../layouts/Layout.astro";
     color: #828282;
     font-size: 1.5rem;
     padding: 0.625rem;
-}
+  }
 
   fieldset {
     color: #828282;
     background-color: #191919;
-}
+  }
 
   /* ganze Formular */
   .form-element {
@@ -260,6 +301,26 @@ import Layout from "../layouts/Layout.astro";
     background-color: #fff;
     color: black;
   }
+
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    background: #1b1c1e;
+    box-shadow: 2px 2px 5px #666666;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  table th {
+    font-size: 1.125rem;
+  }
+
+  table td {
+    font-size: 1.125;
+    padding: 0.2rem 0.2rem;
+  }
+
   /*
   button[type="submit"] {
     background-color: #545557;
