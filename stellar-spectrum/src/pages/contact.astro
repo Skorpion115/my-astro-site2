@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
   keywords="Kontakt"
 >
   <div class="container">
-    <h2>Kontaktformular</h2>
+    <h2>Contact Me</h2>
     <form
       method="post"
       name="Contact Form 2"
@@ -163,7 +163,7 @@ import Layout from "../layouts/Layout.astro";
     </form>
   </div>
 
-  <h1>Freie Termine</h1>
+  <h2>Freie Termine</h2>
 
   <div>
     <!-- Tabelle für freie Termine-->
@@ -221,26 +221,27 @@ import Layout from "../layouts/Layout.astro";
   }
 
   h1 {
-  font-size: 3.68rem;
-  color: #fff;
-  font-weight: 600;
-  padding: 1.25rem;
-}
+    font-size: 3.68rem;
+    color: rgb(218, 54, 54);
+    font-weight: 600;
+    padding: 1.25rem;
+  }
 
-h2 {
-  color: rgb(218, 54, 54);;
-}
+  h2 {
+    color: rgb(218, 54, 54);
+    font-size: 2.5rem;
+  }
 
-p {
-  color: #fff;
-  text-align: center;
-  font-size: 1.25rem;
-}
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.25rem;
+  }
 
-small {
-  color: white;
-  font-size: 1rem;
-}
+  small {
+    color: white;
+    font-size: 1rem;
+  }
 
   .container {
     margin: 0 auto;
@@ -255,17 +256,17 @@ small {
 
   fieldset {
     color: #828282;
-    background-color: #191919;
+    /*background-color: #191919; */
   }
 
   /* ganze Formular */
   .form-element {
-    background-color: #1b1c1e;
+    /*background-color: #1b1c1e; */
   }
 
   /* Beschreibung der Felder unten */
   .invalid-feedback {
-    background-color: #1b1c1e;
+    /*background-color: #1b1c1e; */
     color: #828282;
     font-size: 1.125rem;
     padding: 0.625rem;
@@ -309,10 +310,12 @@ small {
   /* Schriftgröße im Ausfüllbereich */
   input,
   textarea {
-    background-color: #1b1c1e;
+    /*background-color: #1b1c1e; */
+    color: var(--color-white);
+    background-color: var(--color-black);
     font-family: "Poppins", sans-serif;
     font-size: 1.125rem;
-    color: #fff;
+    /*color: #fff; */
     font-size: 1.125rem;
     padding: 0.625rem;
   }
