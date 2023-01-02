@@ -6,7 +6,7 @@ export default defineConfig({
     // static oder server SSR serverseitiges rändern
     output: 'static',
     // Die endgültige Seite bei deinem Hostanbieter
-    site: 'https://musikstudio-ziebart.de',
+    site: 'https://musicstudio-ziebart.de',
     // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde
     integrations: [sitemap({
         customPages: ['https://www.musikstudio-ziebart.de/contact.html', 'https://www.musikstudio-ziebart.de/thanks.html'],
