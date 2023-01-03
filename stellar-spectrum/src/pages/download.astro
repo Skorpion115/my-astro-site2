@@ -36,9 +36,8 @@ import Layout from "../layouts/Layout.astro";
           </tr>
           <tr>
             <td>
-              <a
-                href="/Songs/Auf_einem_persischen_Markt.mp3"
-                class="link-green">anh&#246;ren</a
+              <a href="/Songs/Auf_einem_persischen_Markt.mp3" class="link-green"
+                >anh&#246;ren</a
               >
             </td>
             <td>
@@ -61,14 +60,11 @@ import Layout from "../layouts/Layout.astro";
           </tr>
           <tr>
             <td>
-              <a href="/Songs/Barcarole.mid" class="link-green">anh&#246;ren</a
-              >
+              <a href="/Songs/Barcarole.mid" class="link-green">anh&#246;ren</a>
             </td>
             <td>
-              <a
-                href="/bilder/Barcarole.pdf"
-                target="_blank"
-                class="link-green">ansehen</a
+              <a href="/bilder/Barcarole.pdf" target="_blank" class="link-green"
+                >ansehen</a
               >
             </td>
             <td>
@@ -106,8 +102,7 @@ import Layout from "../layouts/Layout.astro";
           </tr>
           <tr>
             <td>
-              <a href="/Songs/mondschein.mid" class="link-green"
-                >anh&#246;ren</a
+              <a href="/Songs/mondschein.mid" class="link-green">anh&#246;ren</a
               >
             </td>
             <td>
@@ -190,8 +185,7 @@ import Layout from "../layouts/Layout.astro";
           </tr>
           <tr>
             <td>
-              <a href="/Songs/Fledermaus.mid" class="link-green"
-                >anh&#246;ren</a
+              <a href="/Songs/Fledermaus.mid" class="link-green">anh&#246;ren</a
               >
             </td>
             <td>
@@ -246,42 +240,42 @@ import Layout from "../layouts/Layout.astro";
       <br />
       <br />
       <h2>Video Dateien zum Noten lesen!</h2>
-      <figure>
-        <video
-          class="responsive-video"
-          src="/images/Largo.mp4"
-          width="640"
-          height="480"
-          controls
-          poster="/images/vs210213-001.webp"
-          preload="none"></video>
-        <figcaption>Aus der neuen Welt - Antonin Dvorák</figcaption>
-      </figure>
+
+      <div class="video-container-wrapper">
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ytcQ-I1BTNk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
       <hr />
       <p>
-        <b>The Grand 3</b>
+        <b>Ten Words - Jo Satriani</b>
       </p>
       <p>
-        Prelude Opus 28 Nr. 4 - Frederic Chopin. Der Klang von diesem
-        Fl&uuml;gel kommt aus einem Computer Programm namens
-        <b>"The Grand 3"</b>. Ich spiele da mit einem B&ouml;send&ouml;rfer
-        Fl&uuml;gel. Man k&ouml;nnte aber auch einen Steinway oder Yamaha
-        Fl&uuml;gel ansteuern. Ich finde er klinkt sehr gut. Das Beste was ich
-        bisher gefunden habe. Die Audiodaten sind bei diesem Video: 128 kBit/s,
-        Kan&auml;le 2 (Stereo), Abtastrate 44.100 kHz. Dies entspricht
-        ungef&auml;hr die Klangqualit&auml;t von einem Rundfunksender.
+        Eines der schönsten Gitarrenstücke ist meiner Meinung nach dieses Stück
+        von Jo Satriani. Ich habe es mal aufgenommen und auf YouTube gestellt.
       </p>
-      <figure>
-        <video
-          class="responsive-video"
-          src="/images/Prelude.mp4"
-          width="640"
-          height="480"
-          controls
-          poster="/images/vs210211-001.webp"
-          preload="none"></video>
-        <figcaption>Prelude Opus 28 Nr. 4 - Frederic Chopin</figcaption>
-      </figure>
+
+      <div class="video-container-wrapper">
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8ucTzPOBzAo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
       <hr />
       <p>Black Mountain Rag</p>
       <p>
@@ -295,17 +289,20 @@ import Layout from "../layouts/Layout.astro";
           class="link-green">ansehen</a
         > bzw. downloaden.
       </p>
-      <figure>
-        <video
-          class="responsive-video"
-          src="/images/Rag.mp4"
-          controls
-          poster="/images/vs210830-002.webp"
-          width="640"
-          height="360"
-          preload="none"></video>
-        <figcaption>Black Mountain Rag - Traditional</figcaption>
-      </figure>
+
+      <div class="video-container-wrapper">
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/44O9ZSf7Dhc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
       <p>
         Auf allen diesen obengenannten Werken besteht keine gemapflicht mehr.
         Alle diese St&#252;cke sind also frei! Die Aufnahmen und die Noten sind
@@ -321,91 +318,91 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </article>
   </section>
+
+  <style>
+    #download {
+      display: block;
+      width: 96%;
+      max-width: 100%;
+      margin: 7% auto;
+      padding: 1.25em;
+      text-align: center;
+      font-style: normal;
+      font-family: var(--font);
+      color: var(--color-white);
+      background-color: var(--color-black);
+    }
+
+    #download article {
+      display: inline-block;
+      width: 96%;
+      vertical-align: top;
+    }
+
+    /* Midi Wiedergabe */
+    #download table {
+      width: auto;
+      text-align: center;
+      box-shadow: 1px 2px 5px #666666;
+    }
+
+    #download article table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    #download article table th {
+      font-size: 1rem;
+      font-weight: bold;
+      empty-cells: show;
+    }
+
+    #download article table td {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    /* Download Videos */
+    figcaption strong {
+      border-bottom: 10px solid #d6d0c1;
+      padding-bottom: 0px;
+      margin: 0px 0;
+      display: block;
+    }
+
+    figcaption {
+      margin: 1rem;
+      padding: 0rem;
+      width: auto;
+      text-align: center;
+      color: var(--color-white);
+      background-color: var(--color-black);
+    }
+
+    #download article figure {
+      margin: 0 auto;
+    }
+
+    #download article p {
+      margin: 0em;
+      text-align: left;
+    }
+
+    #download article h3 {
+      margin-left: 3%;
+      font-size: 1.25rem;
+    }
+
+    #download ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
 </Layout>
-
-<style>
-  #download {
-    display: block;
-    width: 96%;
-    max-width: 100%;
-    margin: 7% auto;
-    padding: 1.25em;
-    text-align: center;
-    font-style: normal;
-    font-family: var(--font);
-    color: var(--color-white);
-    background-color: var(--color-black);
-  }
-
-  #download article {
-    display: inline-block;
-    width: 96%;
-    vertical-align: top;
-  }
-
-  /* Midi Wiedergabe */
-  #download table {
-    width: auto;
-    text-align: center;
-    box-shadow: 1px 2px 5px #666666;
-  }
-
-  #download article table,
-  th,
-  td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin: 0 auto;
-  }
-
-  #download article table th {
-    font-size: 1rem;
-    font-weight: bold;
-    empty-cells: show;
-  }
-
-  #download article table td {
-    font-size: 1rem;
-    font-weight: normal;
-  }
-
-  /* Download Videos */
-  figcaption strong {
-    border-bottom: 10px solid #d6d0c1;
-    padding-bottom: 0px;
-    margin: 0px 0;
-    display: block;
-  }
-
-  figcaption {
-    margin: 1rem;
-    padding: 0rem;
-    width: auto;
-    text-align: center;
-    color: var(--color-white);
-    background-color: var(--color-black);
-  }
-
-  #download article figure {
-    margin: 0 auto;
-  }
-
-  #download article p {
-    margin: 0em;
-    text-align: left;
-  }
-
-  #download article h3 {
-    margin-left: 3%;
-    font-size: 1.25rem;
-  }
-
-  #download ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-</style>
