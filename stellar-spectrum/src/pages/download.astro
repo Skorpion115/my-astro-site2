@@ -242,7 +242,7 @@ import Layout from "../layouts/Layout.astro";
       <h2>Video Dateien zum Noten lesen!</h2>
 
       <div class="video-container-wrapper">
-        <div>
+        <div class="video-container">
           <iframe
             width="560"
             height="315"
@@ -250,10 +250,11 @@ import Layout from "../layouts/Layout.astro";
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+            allowfullscreen
+          >
+          </iframe>
         </div>
       </div>
-
       <hr />
       <p>
         <b>Ten Words - Jo Satriani</b>
@@ -264,7 +265,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
 
       <div class="video-container-wrapper">
-        <div>
+        <div class="video-container">
           <iframe
             width="560"
             height="315"
@@ -291,7 +292,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
 
       <div class="video-container-wrapper">
-        <div>
+        <div class="video-container">
           <iframe
             width="560"
             height="315"
@@ -320,89 +321,68 @@ import Layout from "../layouts/Layout.astro";
   </section>
 </Layout>
 
-  <style>
-    #download {
-      display: block;
-      width: 96%;
-      max-width: 100%;
-      margin: 7% auto;
-      padding: 1.25em;
-      text-align: center;
-      font-style: normal;
-      font-family: var(--font);
-      color: var(--color-white);
-      background-color: var(--color-black);
-    }
+<style>
+  #download {
+    display: block;
+    width: 96%;
+    max-width: 100%;
+    margin: 7% auto;
+    padding: 1.25em;
+    text-align: center;
+    font-style: normal;
+    font-family: var(--font);
+    color: var(--color-white);
+    background-color: var(--color-black);
+  }
 
-    #download article {
-      display: inline-block;
-      width: 96%;
-      vertical-align: top;
-    }
+  #download article {
+    display: inline-block;
+    width: 96%;
+    vertical-align: top;
+  }
 
-    /* Midi Wiedergabe */
-    #download table {
-      width: auto;
-      text-align: center;
-      box-shadow: 1px 2px 5px #666666;
-    }
+  /* Midi Wiedergabe */
+  #download table {
+    width: auto;
+    text-align: center;
+    box-shadow: 1px 2px 5px #666666;
+  }
 
-    #download article table,
-    th,
-    td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      margin: 0 auto;
-    }
+  #download article table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
 
-    #download article table th {
-      font-size: 1rem;
-      font-weight: bold;
-      empty-cells: show;
-    }
+  #download article table th {
+    font-size: 1rem;
+    font-weight: bold;
+    empty-cells: show;
+  }
 
-    #download article table td {
-      font-size: 1rem;
-      font-weight: normal;
-    }
+  #download article table td {
+    font-size: 1rem;
+    font-weight: normal;
+  }
 
-    /* Download Videos */
-    figcaption strong {
-      border-bottom: 10px solid #d6d0c1;
-      padding-bottom: 0px;
-      margin: 0px 0;
-      display: block;
-    }
+  #download article p {
+    margin: 0em;
+    text-align: left;
+  }
 
-    figcaption {
-      margin: 1rem;
-      padding: 0rem;
-      width: auto;
-      text-align: center;
-      color: var(--color-white);
-      background-color: var(--color-black);
-    }
+  #download article h3 {
+    margin-left: 3%;
+    font-size: 1.25rem;
+  }
 
-    #download article figure {
-      margin: 0 auto;
-    }
-
-    #download article p {
-      margin: 0em;
-      text-align: left;
-    }
-
-    #download article h3 {
-      margin-left: 3%;
-      font-size: 1.25rem;
-    }
-
-    #download ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-  </style>
+  #download ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
