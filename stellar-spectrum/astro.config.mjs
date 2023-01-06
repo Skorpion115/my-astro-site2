@@ -7,12 +7,21 @@ export default defineConfig({
     output: 'static',
     // Die endgültige Seite bei deinem Hostanbieter
     site: 'https://musicstudio-ziebart.de',
-    // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde
+    // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
+    /*
     integrations: [sitemap({
         customPages: ['https://www.musikstudio-ziebart.de/contact.html', 'https://www.musikstudio-ziebart.de/thanks.html'],
         entryLimit: 10000,
         lastmod: new Date('2022-11-24'),
-    })],
+    })], */
+    // Sitemap intergrieren
+    integrations: [
+        // Beispiel: Argumente an eine Integration übergeben
+        sitemap({
+            entryLimit: 10000,
+            lastmod: new Date('2023-01-06'),
+        })
+    ],
     // Beispiel: Erfordere abschließende Schrägstriche
     // in Seiten-URLs während der Entwicklung
     trailingSlash: 'always',
