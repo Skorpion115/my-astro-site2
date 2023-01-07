@@ -1,0 +1,14 @@
+# Redirects from what the browser requests to what we serve
+/home              /
+/cuties            https://www.musicstudio-ziebart.de
+
+# a path:
+/templates/index.html
+  # headers for that path:
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+# another path:
+/templates/index2.html
+  # headers for that path:
+  X-Frame-Options: SAMEORIGIN
+
