@@ -6,7 +6,7 @@ export default defineConfig({
     // static oder server SSR serverseitiges rändern
     output: 'static',
     // Die endgültige Seite bei deinem Hostanbieter
-    site: 'https://musicstudio-ziebart.netlify.app',
+    site: 'https://musicstudio-ziebart.de',
     // Sitemap intergrieren, Eine Seite aufnehmen die nicht mit Astro erstellt wurde stillgelegt!!!
     /*
     integrations: [sitemap({
